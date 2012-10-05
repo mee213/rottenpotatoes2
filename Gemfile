@@ -10,6 +10,8 @@ group :development, :test do
   # if you already have a 'group :development,:test' block in your
   # Gemfile, you can just move the line "gem 'sqlite3'" into it.
   gem 'sqlite3' # use SQLite only in development and testing
+  # moved from 'use debugger' section below because heroku deploy failed
+  gem 'ruby-debug19', :require => 'ruby-debug' 
 end 
 group :production do
   gem 'pg' # use PostgreSQL in production (Heroku)
@@ -33,5 +35,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'haml'
